@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LoanCalculator = () => {
+  const navigate = useNavigate();
   const [loanAmount, setLoanAmount] = useState("");
   const [deposit, setDeposit] = useState("");
   const [loanPeriod, setLoanPeriod] = useState("");
@@ -58,6 +60,10 @@ const LoanCalculator = () => {
     // Set the results
     setMonthlyPayment(monthlyPaymentPKR);
     setTotalRepayment(totalRepaymentPKR);
+  };
+
+  const goToRegister = () => {
+    navigate("/register");
   };
 
   return (
@@ -123,7 +129,7 @@ const LoanCalculator = () => {
           <button
             type="button"
             onClick={calculateLoan}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg"
+            className="px-6 py-3 bg-red-900 text-white rounded-lg shadow-lg"
           >
             Calculate Loan
           </button>
@@ -135,6 +141,16 @@ const LoanCalculator = () => {
             <h3 className="text-xl font-semibold">Loan Calculation Results</h3>
             <p>Monthly Payment: <strong>₨ {monthlyPayment}</strong></p>
             <p>Total Repayment: <strong>₨ {totalRepayment}</strong></p>
+
+            {/* Register Button */}
+            <div className="mt-6">
+              <button
+                onClick={goToRegister}
+                className="px-6 py-3 bg-red-900 text-white rounded-lg shadow-lg hover:bg-red-800 transition duration-300"
+              >
+                Register Now
+              </button>
+            </div>
           </div>
         )}
       </div>

@@ -43,7 +43,7 @@ const LoanRequestForm = () => {
 
           {/* Additional fields (email, phone, etc.) */}
 
-          <button type="submit" className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg w-full">
+          <button type="submit" className="px-6 py-3 bg-red-900 text-white rounded-lg shadow-lg w-full">
             Submit Request
           </button>
         </form>

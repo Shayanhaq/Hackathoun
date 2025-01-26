@@ -31,9 +31,9 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-10">
-      <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-        <h2 className="text-3xl font-semibold text-center text-blue-600 mb-6">
+    <div className="min-h-screen bg-gradient-to-r from-red-300 to-indigo-200 py-10">
+      <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+        <h2 className="text-3xl font-semibold text-center text-red-900 mb-6">
           Witness Registration
         </h2>
 
@@ -49,7 +49,7 @@ const Dashboard = () => {
                   name="fullName"
                   value={witness1.fullName}
                   onChange={(e) => handleWitnessChange(e, 1)}
-                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-200 ease-in-out transform hover:scale-105"
                 />
               </div>
               <div>
@@ -59,7 +59,7 @@ const Dashboard = () => {
                   name="cnic"
                   value={witness1.cnic}
                   onChange={(e) => handleWitnessChange(e, 1)}
-                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-200 ease-in-out transform hover:scale-105"
                 />
               </div>
               <div>
@@ -69,7 +69,7 @@ const Dashboard = () => {
                   name="email"
                   value={witness1.email}
                   onChange={(e) => handleWitnessChange(e, 1)}
-                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-200 ease-in-out transform hover:scale-105"
                 />
               </div>
               <div>
@@ -79,7 +79,7 @@ const Dashboard = () => {
                   name="contact"
                   value={witness1.contact}
                   onChange={(e) => handleWitnessChange(e, 1)}
-                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-200 ease-in-out transform hover:scale-105"
                 />
               </div>
             </div>
@@ -96,7 +96,7 @@ const Dashboard = () => {
                   name="fullName"
                   value={witness2.fullName}
                   onChange={(e) => handleWitnessChange(e, 2)}
-                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-900 transition duration-200 ease-in-out transform hover:scale-105"
                 />
               </div>
               <div>
@@ -106,7 +106,7 @@ const Dashboard = () => {
                   name="cnic"
                   value={witness2.cnic}
                   onChange={(e) => handleWitnessChange(e, 2)}
-                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-200 ease-in-out transform hover:scale-105"
                 />
               </div>
               <div>
@@ -116,7 +116,7 @@ const Dashboard = () => {
                   name="email"
                   value={witness2.email}
                   onChange={(e) => handleWitnessChange(e, 2)}
-                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-200 ease-in-out transform hover:scale-105"
                 />
               </div>
               <div>
@@ -126,7 +126,7 @@ const Dashboard = () => {
                   name="contact"
                   value={witness2.contact}
                   onChange={(e) => handleWitnessChange(e, 2)}
-                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-200 ease-in-out transform hover:scale-105"
                 />
               </div>
             </div>
@@ -136,7 +136,7 @@ const Dashboard = () => {
           <div className="text-center">
             <button
               type="submit"
-              className="py-3 px-6 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="py-3 px-6 bg-red-900 text-white rounded-lg hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-200 ease-in-out transform hover:scale-105"
             >
               Submit Witness Information
             </button>
