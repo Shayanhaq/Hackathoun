@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const [witness1, setWitness1] = useState({
@@ -13,6 +14,8 @@ const Dashboard = () => {
     email: "",
     contact: "",
   });
+  const [showPopup, setShowPopup] = useState(false);
+  const navigate = useNavigate();
 
   const handleWitnessChange = (e, witness) => {
     const { name, value } = e.target;
@@ -27,7 +30,15 @@ const Dashboard = () => {
     e.preventDefault();
     console.log("Witness 1 Data:", witness1);
     console.log("Witness 2 Data:", witness2);
-    // You can send the data to your backend here
+
+    // Simulate the form submission process
+    setShowPopup(true);
+
+    // After 2 seconds, navigate to the landing page
+    setTimeout(() => {
+      setShowPopup(false);
+      navigate("/"); // Redirect to the landing page
+    }, 2000);
   };
 
   return (
@@ -143,6 +154,16 @@ const Dashboard = () => {
           </div>
         </form>
       </div>
+
+      {/* Popup Message */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+            <h3 className="text-xl font-semibold text-green-600">Your Request has been Submitted!</h3>
+            <p className="mt-4">Redirecting to the landing page...</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
